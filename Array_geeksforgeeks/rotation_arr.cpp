@@ -6,7 +6,7 @@ void result_arr_one_rotation (int arr [], int n){
    for (int i=0;i<n-1;++i){
     arr[i]=arr[i+1];
   }
-  arr[n]=p;
+  arr[n-1]=p;
   //return arr;
 }
 
