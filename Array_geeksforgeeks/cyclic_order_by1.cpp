@@ -25,7 +25,7 @@ int main(){
   int test_arr[5]={1,2,3,4,5};
   cyclic_1(test_arr,5);
   for(int j=0;j<5;++j){
-    cout<<test_arr[j]<<" ";
+    cout<<test_arr[j]<<" ";go
   }
   return 0;
 }
