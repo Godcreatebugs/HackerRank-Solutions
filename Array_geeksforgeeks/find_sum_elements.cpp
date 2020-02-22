@@ -33,8 +33,9 @@ void SumElements(int arr[],int n,int sum){
  //you dont want to exceed mid way though the array that will
  //be like saying a+b and b+a are different
   while (l<r){
-    if (arr[l]+arr[r==sum]){
+    if (arr[l]+arr[r]==sum){
       cout<<arr[l]<<" "<<arr[r]<<"\n";
+      return;
     }
     else if(arr[l]+arr[r]<sum){
       l++;
@@ -52,6 +53,7 @@ int main(){
   //array <int,5> arr ={1,2,3,4,5};
    int arr[5]={1,2,3,5,4};
   sort_arr(arr,5);
+  cout<<"\n";
   SumElements(arr,5,8);
   return 0;
 }
