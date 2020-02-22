@@ -49,6 +49,10 @@ int A_arr[d]= make_A(arr[],d);
 int B_arr[n-d]= make_A(arr[],d,n);
 reversal_arr(A_arr[d]);
 reversal_arr(B_arr[n-d]);
+int resultant_arr[n];
+for(int i=0;i<n;i++){
+  
+}
 
 
 
