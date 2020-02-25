@@ -45,7 +45,7 @@ int max_sum(int arr[],int n){
   return max_sum;
 }
 int main(){
-  int arr[]={1,2,3,4,5};
+  int arr[]={4,5,1,2,3};
   // int sum =sum_Array(arr,5);
   // cout<<sum<<"\n";
   // Rotate_one(arr,5);
