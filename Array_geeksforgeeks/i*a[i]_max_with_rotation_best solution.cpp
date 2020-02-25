@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
-
+// So this problem is more about the mathematical progression and
+// reducing the time complecity of the problem to O(n)
+// and for that we have to use a formula like given below then run a for loop and
+// compare the values.
 int MakeSum(int arr[],int n){
   int sum=0;
   for(int i=0;i<n;i++){
