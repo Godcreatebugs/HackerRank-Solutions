@@ -4,31 +4,31 @@ using namespace std;
 int MakeSum(int arr[],int n){
   int sum=0;
   for(int i=0;i<n;i++){
-    sum+=arr[i];
+    sum+=i*arr[i];
   }
 return sum;
 }
 
  int Max_Product(int arr[],int n){
-   int original_sum=MakeSum(arr,n);
-   int current_sum = original_sum;
+   int arr_0=MakeSum(arr,n);
+   int arr_j_1 = arr_0;
    int max_ele_product;
    for(int j=1;j<n;j++){
-      int update_sum;
+      int arr_j;
       //int max_ele_product;
-      update_sum = current_sum +original_sum -(n-j)*arr[n-j];
-      if (update_sum>current_sum){
-      max_ele_product=update_sum;
+      arr_j = arr_j_1 + arr_0 -(n)*arr[n-j];
+      if (arr_j>arr_j_1){
+      max_ele_product=arr_j;
       }
-      current_sum=update_sum;
+      arr_j_1=arr_j;
 
    }
-return max_ele_product;
+  return max_ele_product;
 
  }
 
  int main(){
-   int arr[]={5,4,3,2,1};
+   int arr[]={5,1,2,3,4};
     int max_product=Max_Product(arr,5);
     cout<<max_product;
    return 0;
