@@ -26,23 +26,43 @@ public:
 
         /*
         Method 2: We can harness power of hasmap in c++ which offer linear time search for each element using key-             value           pair. And we can compare current traversing element to the element+1  and if we havent find that element         we have got           our match.
-        */
+
         int n = nums.size();
         unordered_map <int,int> lookup_hash;
         for (int i=0;i<n;i++){
             lookup_hash[nums[i]] = i; //fulfilled elements in hashmap
         }
         for (int i=0;i<n+1;i++){
-            if (lookup_hash.find(nums[i]) == lookup_hash.end()){
-                return nums[i];
+            if (lookup_hash.find(i) == lookup_hash.end()){
+                return i;
             }
         }
         return -1;
+
+   }
+   Works like charm*/
+        /*
+        Method 3: Bit Manipulation, this happens without sorting in linear time and basically we keep track of XOR operator of      index and the number itself and of course we strach to index+1 cuz thats how we meet boundries, and the missing element will pop itself out.
+
+    int n = nums.size();
+    int res=0;  //always initalize eith zero cuz otherwise you it gets into grabage
+    // for (auto &num : nums){
+    //     res ^=num;
+    // }
+    for(int i=0;i<=n;i++){
+        if(i<n) //here to cover edge cases we have to go through n
+            res ^= i^nums[i];
+        else
+            res ^=i;
     }
+         return res;
+    }
+
+        */
 
         /*
         METHOD 4: This is badass way to do this question you use the sum of numbers formula and do the sum using for           loop of all the number then the differnce is the missing number and remember what is the sum_sq-sum is 0 then         your array is complete.
-       \
+      */
         int n = nums.size();
         int gauss_sum = n* (n+1) / 2 ;
         int sum{0};
@@ -53,5 +73,5 @@ public:
         return gauss_sum - sum;
 
         }
-        */
+
 };
