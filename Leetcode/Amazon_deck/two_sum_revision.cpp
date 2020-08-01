@@ -21,11 +21,13 @@ vector <int> TwoSum(vector <int> arr,int target){
 */
 
 //HASHMAP SOLUTION O(N) TIME COMPLEXITY
-//decelaration of hah_table
+//decelaration of hash_table
 for(int i=0;i<n;i++){
   int num_find = target - arr[i];
   if (hash.find(num_find) != hash.end()){
-       res ={arr[i],num_find};
+    //you need index returned and not the elements
+       // res ={arr[i],num_find};
+       res ={i,hash[num_find]}; 
   }
   hash[arr[i]]=i;
 }
