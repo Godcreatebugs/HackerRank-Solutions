@@ -23,6 +23,7 @@ int MaxContainer(vector <int> &height){
 
   while(i<j){
     //I had made a mistake and put prdoct and res outside while which is mistake cuz you want to update them inside while.
+    //updating these 2 variable every time you get new i and j
     int product = (j-i) * min(height[j],height[i]);
     res = max(product,res);
     if (height[i]>=height[j]){
