@@ -28,7 +28,9 @@ struct TreeNode{
 
 bool ValidBST(TreeNode* root){
   stack<TreeNode*> s;
-  int prev =INT32_MIN;
+  // int prev =INT32_MIN;
+  //optional helps to create an object only when needed prev will alwasy contain a value of 0 and it will give trouble in case [-2147483648]. 
+   optional <int> prev;
   while(!s.empty() || root !=nullptr){
     //poplating only the leftmost part of tree
     // we have to consider a case where root = root->root->right is going to give nullptr
